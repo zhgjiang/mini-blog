@@ -1,0 +1,29 @@
+/** reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 960px;
+    margin: 0 auto;
+}
+
+/** nav */
+
+#nav {
+    margin: 10px 0 10px 0; 
+    padding: 0 5px 0 5px;
+}
+
+/** index */
+#index {
+    float: left;
+    width: 200px;
+    padding: 15px;
+    background-color: #eee;
+}
+
+#main {
+    margin-left: 280px;
+}

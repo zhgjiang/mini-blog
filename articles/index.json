@@ -1,0 +1,13 @@
+[{
+    name: 'data',
+    src: 'data.md'
+ }, {
+    name: 'README',
+    src: 'README.md'
+}, {
+    name: 'todo',
+    src: 'todo.md'
+}, {
+    name: 'resume',
+    src: 'resume.md'
+}]
