@@ -23,6 +23,13 @@ body {
     padding: 15px;
     background-color: #eee;
 }
+    #index a {
+        color: black;
+        display: inline-block;
+        border-top: 1px solid #999;
+        line-height: 28px;
+        width: 200px;        
+    }
 
 #main {
     margin-left: 280px;

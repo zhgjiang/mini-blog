@@ -1,24 +1,19 @@
 define(function(require) {
     //load doc index.json
     var indexJson = require('json!./articles/index.json');        
-    var indexHtml = '';
-    var i = 0;
-    var len = indexJson.length;
+    var index = require('./js/index');
 
-    for(i=0; i<len; i++){
-        indexHtml += '<a href="#" data-href="' + './articles/' + indexJson[i].src + '">' + indexJson[i].name + '</a>'
-        indexHtml += '<br>';
-    }
-    
-    var preview = document.getElementById('index');
-    preview.innerHTML = indexHtml;
+    var indexHtml = index.index(indexJson);
+    var indexDiv = document.getElementById('index');
+    indexDiv.innerHTML = indexHtml;
 
     var main = document.getElementById('main');
     //load markdown article
-    $('a[data-href]').on('click', function(){
+    $('a[data-href]').on('click', function(e){
         $.get($(this).attr('data-href'), function(result){
             var article = markdown.toHTML(result); 
             main.innerHTML = article;    
         });
+        e.preventDefault();
     });
 });
